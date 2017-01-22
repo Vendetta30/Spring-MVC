@@ -1,0 +1,9 @@
+# Java build artifacts class files
+*.class
+*.iml
+.idea
+.gradle
+# other generated files
+bin/
+gen/
+build/

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="base" template="/WEB-INF/layout/page.jsp">
+        <put-attribute name="header" value="/WEB-INF/layout/header.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp"/>
+    </definition>
+
+    <definition name="index" extends="base">
+        <put-attribute name="body" value="/WEB-INF/views/index.jsp"/>
+    </definition>
+    <!--All Related to Topic-->
+    <definition name="topicCreate" extends="base">
+        <put-attribute name="body" value="/WEB-INF/views/topic/create.jsp"/>
+    </definition>
+
+    <definition name="topicList" extends="base">
+        <put-attribute name="body" value="/WEB-INF/views/topic/list.jsp"/>
+    </definition>
+
+    <definition name="editTopic" extends="base">
+        <put-attribute name="body" value="/WEB-INF/views/topic/edit.jsp"/>
+    </definition>
+
+    <!--All Related to Stock-->
+    <definition name="stockCreate" extends="base">
+        <put-attribute name="body" value="/WEB-INF/views/stock/create.jsp"/>
+    </definition>
+
+    <definition name="stockList" extends="base">
+        <put-attribute name="body" value="/WEB-INF/views/stock/list.jsp"/>
+    </definition>
+
+    <definition name="editStock" extends="base">
+        <put-attribute name="body" value="/WEB-INF/views/stock/edit.jsp"/>
+    </definition>
+
+</tiles-definitions>
