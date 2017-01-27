@@ -1,0 +1,58 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:include="template/page::resourceCSS">
+    <title>Edit Topic</title>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+    <div th:include="template/page::header"></div>
+    <div class="content-wrapper">
+        <section class="content-header">
+            <h1>
+                Topic
+                <small>Topic</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="#">Forms</a></li>
+                <li class="active">Edit Topic</li>
+            </ol>
+        </section>
+        <section class="content">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Edit Topic</h3>
+                        </div>
+                        <form method="post" th:object="${topic}">
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="topicName">First Name</label>
+                                    <input class="form-control" name="topicName" id="topicName"
+                                           placeholder="Enter Topic Name" th:field="*{topicName}"/>
+                                </div>
+                            </div>
+                            <div class="box-footer">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="submit" class="btn btn-flat btn-primary" value="Submit"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a class="btn btn-flat btn-info pull-right" th:href="@{/topic/list}">
+                                            Topic List
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </section>
+    </div>
+    <div th:include="template/page :: copy"></div>
+</div>
+</body>
+</html>
